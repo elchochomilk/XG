@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  header {
+    background-color: #23c71d;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  nav ul li a {
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px;
+  }
+  
+  nav ul li a:hover {
+    color: #23c71d;
+    background-color: white;
+    border-radius: 5px;
+  }
+  
+  main {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  #lista-carrito {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 800px;
+    border-collapse: collapse;
+  }
+  
+  #lista-carrito th,
+  #lista-carrito td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+  }
+  
+  #lista-carrito th {
+    background-color: #23c71d;
+    color: white;
+  }
+  
+  #lista-carrito td {
+    background-color: white;
+  }
+  
+  #total {
+    font-size: 1.3rem;
+    margin: 20px 0;
+  }
+  
+  button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Pie de página */
+  footer {
+    background-color: #23c71d;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 30px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    #lista-carrito {
+      font-size: 0.9rem;
+    }
+  
+    #lista-carrito th,
+    #lista-carrito td {
+      padding: 8px;
+    }
+  }
+  
+  .logo-container {
+    position: absolute;
+    top: -95px;
+    left: -5px;
+  }
+  
+  .logo {
+    width: 250px;
+    height: auto;
+  }
+  
+  #carrito-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    text-align: right;
+    padding: 10px;
+    border-radius: 8px;
+    z-index: 10;
+  }
+  
+  #carrito {
+    margin-top: 10px;
+  }
+  
+  
+  footer {
+    background-color: #23c71d;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+  }
+  
+  footer p {
+    font-size: 1rem;
+  }

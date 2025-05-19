@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Xochilk Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <a href="index.html">
+        <img src="img/logo.png" alt="Logo Xochilk Game" class="logo">
+      </a>
+    </div>
+
+    <h1>𝔁𝓸𝓬𝓱𝓲𝓵𝓴 𝓰𝓪𝓶𝓮</h1>
+
+    <nav>
+      <ul>
+        <li><a href="index.html" title="pagina principal">𝙞𝙣𝙞𝙘𝙞𝙤</a></li>
+        <li><a href="contacto.html"> 𝙘𝙤𝙣𝙩𝙖𝙘𝙩𝙤</a></li>
+        </div>
+      </ul>
+      <div id="carrito-container">
+        <a href="carrito.html" id="ver-carrito" class="ver-carrito">
+          Ver Carrito (<span id="contador-carrito">0</span>)
+        </a>      
+        <div id="carrito" class="oculto">
+          <h2>Carrito de compras</h2>
+          <ul id="lista-carrito"></ul>
+          <p>Total: $<span id="total-carrito">0.00</span></p>
+          <button onclick="vaciarCarrito()">Vaciar carrito</button>
+        </div>
+    </nav>
+
+
+  </header>
+
+  <main>
+    <h2>Bienvenidos a Xochilk Game</h2>
+    <p>Busca y explora las últimas actualizaciones de tus videojuegos o tus consolas favoritas.</p>
+
+    <section class="productos" id="productos">
+    <div class="producto">
+  <h3>GTA 5</h3>
+  <img src="img/GTAV.png" alt="GTA 5" width="200">
+  <p>$255 MXN</p>
+  <p>
+    <span class="descripcion-corta">Explora el mundo abierto de Los Santos...</span>
+    <span class="descripcion-completa oculto">con acción, crimen y libertad total.</span>
+    <button class="ver-mas" onclick="toggleDescripcion(this)">Ver más</button>
+  </p>
+  <button class="agregar-carrito" data-id="1" data-nombre="GTA 5" data-precio="$699.99">Agregar al carrito</button>
+</div>
+
+      <div class="producto">
+  <h3>FIFA 24</h3>
+  <img src="img/FIFA25.png" alt="FIFA 24" width="200">
+  <p>$1,190 MXN</p>
+  <p>
+    <span class="descripcion-corta">La experiencia de fútbol más realista...</span>
+    <span class="descripcion-completa oculto">con licencias oficiales, jugabilidad mejorada y modos competitivos en línea y offline.</span>
+    <button class="ver-mas" onclick="toggleDescripcion(this)">Ver más</button>
+  </p>
+  <button class="agregar-carrito" data-id="2" data-nombre="FIFA 24" data-precio="$1190.00">Agregar al carrito</button>
+</div>
+
+<div class="producto">
+  <h3>Minecraft</h3>
+  <img src="img/minecraft.png" alt="Minecraft" width="200">
+  <p>$460 MXN</p>
+  <p>
+    <span class="descripcion-corta">Crea, construye y sobrevive...</span>
+    <span class="descripcion-completa oculto">en un mundo hecho de bloques infinitos, con modos creativo y supervivencia, ideal para todas las edades.</span>
+    <button class="ver-mas" onclick="toggleDescripcion(this)">Ver más</button>
+  </p>
+  <button class="agregar-carrito" data-id="3" data-nombre="Minecraft" data-precio="$459.99">Agregar al carrito</button>
+</div>
+
+
+    <div class="producto">
+  <h3>God of War Ragnarok</h3>
+  <img src="img/gowr.png" alt="God of War Ragnarok" width="200">
+  <p>$850 MXN</p>
+  <p>
+    <span class="descripcion-corta">Kratos y Atreus enfrentan su destino...</span>
+    <span class="descripcion-completa oculto">en una épica batalla contra los dioses nórdicos, explorando reinos mitológicos con combates intensos y una narrativa profunda.</span>
+    <button class="ver-mas" onclick="toggleDescripcion(this)">Ver más</button>
+  </p>
+  <button class="agregar-carrito" data-id="4" data-nombre="God of war Ragnarok" data-precio="$849.99">Agregar al carrito</button>
+</div>
+
+    <div class="producto">
+  <h3>Red Dead Redemption 2</h3>
+  <img src="img/rdr2.png" alt="Red Dead Redemption 2" width="200">
+  <p>$510 MXN</p>
+  <p>
+    <span class="descripcion-corta">Vive como forajido en el salvaje oeste...</span>
+    <span class="descripcion-completa oculto">en una historia llena de drama, acción y decisiones morales, ambientada en un mundo abierto rico y detallado.</span>
+    <button class="ver-mas" onclick="toggleDescripcion(this)">Ver más</button>
+  </p>
+  <button class="agregar-carrito" data-id="5" data-nombre="Red Dead Redention 2" data-precio="$899.99">Agregar al carrito</button>
+</div>
+
+    <div class="producto">
+  <h3>Fortnite</h3>
+  <img src="img/fortnite.png" alt="Fortnite" width="200">
+  <p>$0.00</p>
+  <p>
+    <span class="descripcion-corta">Juego de batalla real gratuito...</span>
+    <span class="descripcion-completa oculto">con modos creativos, eventos en vivo y colaboraciones épicas con franquicias populares.</span>
+    <button class="ver-mas" onclick="toggleDescripcion(this)">Ver más</button>
+  </p>
+  <button class="agregar-carrito" data-id="6" data-nombre="Fortnite" data-precio="$0.00">Agregar al carrito</button>
+</div>
+
+   <div class="producto">
+  <h3>Spider-Man 2</h3>
+  <img src="img/SM2.png" alt="Spider-Man 2" width="200">
+  <p>$1,190 MXN</p>
+  <p>
+    <span class="descripcion-corta">Controla a Peter Parker y Miles Morales...</span>
+    <span class="descripcion-completa oculto">en una aventura llena de acción en Nueva York, enfrentando villanos como Venom con nuevas habilidades.</span>
+    <button class="ver-mas" onclick="toggleDescripcion(this)">Ver más</button>
+  </p>
+  <button class="agregar-carrito" data-id="7" data-nombre="Spider-Man 2" data-precio="$1190.00">Agregar al carrito</button>
+</div>
+
+
+<div class="producto">
+  <h3>Zelda: TOTK</h3>
+  <img src="img/zelda.png" alt="Zelda: TOTK" width="200">
+  <p>$1,190 MXN</p>
+  <p>
+    <span class="descripcion-corta">Embárcate en una nueva aventura con Link...</span>
+    <span class="descripcion-completa oculto">en el vasto mundo de Hyrule, explorando nuevas regiones y enfrentando peligros en esta secuela épica.</span>
+    <button class="ver-mas" onclick="toggleDescripcion(this)">Ver más</button>
+  </p>
+  <button class="agregar-carrito" data-id="8" data-nombre="Zelda: TOTK" data-precio="$1190-00">Agregar al carrito</button>
+</div>
+
+
+   <div class="producto">
+  <h3>Cyberpunk 2077</h3>
+  <img src="img/CP.png" alt="Cyberpunk 2077" width="200">
+  <p>$510 MXN</p>
+  <p>
+    <span class="descripcion-corta">Un RPG futurista ambientado en Night City...</span>
+    <span class="descripcion-completa oculto">lleno de acción, decisiones que impactan el destino y una profunda narrativa que explora la tecnología, la sociedad y la rebelión.</span>
+    <button class="ver-mas" onclick="toggleDescripcion(this)">Ver más</button>
+  </p>
+  <button class="agregar-carrito" data-id="9" data-nombre="Cyberpunk 2077" data-precio="$510.99">Agregar al carrito</button>
+</div>
+
+
+  <div class="producto">
+  <h3>Among Us</h3>
+  <img src="img/AU.png" alt="Among Us" width="200">
+  <p>$85 MXN</p>
+  <p>
+    <span class="descripcion-corta">Descubre al impostor en este divertido juego...</span>
+    <span class="descripcion-completa oculto">de deducción y trabajo en equipo. Juega en línea con tus amigos mientras intentas completar tareas en una nave espacial mientras un impostor se oculta entre tú y tus compañeros.</span>
+    <button class="ver-mas" onclick="toggleDescripcion(this)">Ver más</button>
+  </p>
+  <button class="agregar-carrito" data-id="10" data-nombre="Among Us" data-precio="$85.99">Agregar al carrito</button>
+</div>
+
+
+  <div class="producto">
+  <h3>The Last of Us Part II</h3>
+  <img src="img/TLOU.png" alt="The Last of Us Part II" width="200">
+  <p>$899.99</p>
+  <p>
+    <span class="descripcion-corta">Una intensa historia de supervivencia...</span>
+    <span class="descripcion-completa oculto">y emociones en un mundo postapocalíptico. Enfrenta dilemas morales, lucha por sobrevivir y explora los paisajes devastados mientras sigues la historia de Ellie.</span>
+    <button class="ver-mas" onclick="toggleDescripcion(this)">Ver más</button>
+  </p>
+  <button class="agregar-carrito" data-id="11" data-nombre="The Last Of Us Part II" data-precio="$899.99">Agregar al carrito</button>
+</div>
+
+
+   <div class="producto">
+  <h3>Hogwarts Legacy</h3>
+  <img src="img/HL.png" alt="Hogwarts Legacy" width="200">
+  <p>$599.99</p>
+  <p>
+    <span class="descripcion-corta">Explora el mundo mágico como estudiante en Hogwarts...</span>
+    <span class="descripcion-completa oculto">y desarrolla tus poderes únicos mientras te sumerges en una historia épica en el mundo de Harry Potter. Lucha contra las fuerzas oscuras y descubre secretos ocultos en la escuela de magia.</span>
+    <button class="ver-mas" onclick="toggleDescripcion(this)">Ver más</button>
+  </p>
+  <button class="agregar-carrito" data-id="12" data-nombre="Hogwarts Legacy" data-precio="$599.99">Agregar al carrito</button>
+</div>
+
+
+   <div class="producto">
+  <h3>Elden Ring</h3>
+  <img src="img/ER.png" alt="Elden Ring" width="200">
+  <p>$699.99</p>
+  <p>
+    <span class="descripcion-corta">Una experiencia de fantasía oscura con combate desafiante...</span>
+    <span class="descripcion-completa oculto">y un vasto mundo abierto lleno de secretos, criaturas y jefes épicos. El juego ofrece una jugabilidad desafiante en un universo inspirado por la obra de George R.R. Martin.</span>
+    <button class="ver-mas" onclick="toggleDescripcion(this)">Ver más</button>
+  </p>
+  <button class="agregar-carrito" data-id="13" data-nombre="Elden Ring" data-precio="$699.99">Agregar al carrito</button>
+</div>
+
+  <div class="producto">
+  <h3>Super Mario Odyssey</h3>
+  <img src="img/SMO.png" alt="Super Mario Odyssey" width="200">
+  <p>$499.99</p>
+  <p>
+    <span class="descripcion-corta">Acompaña a Mario en una aventura 3D por mundos increíbles...</span>
+    <span class="descripcion-completa oculto">y ayuda a Mario a rescatar a la princesa Peach viajando a través de reinos fantásticos, resolviendo rompecabezas y enfrentándote a enemigos en su camino. ¡No olvides usar su compañero Cappy para lanzar ataques y poseer objetos!</span>
+    <button class="ver-mas" onclick="toggleDescripcion(this)">Ver más</button>
+  </p>
+  <button class="agregar-carrito" data-id="14" data-nombre="Super Mario Odyssey" data-precio="$499.99">Agregar al carrito</button>
+</div>    
+    </section>
+  </main>
+
+  <footer>Ⓒ 2025 𝔁𝓸𝓬𝓱𝓲𝓵𝓴 𝓰𝓪𝓶𝓮</footer>
+
+<script>
+  const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+  const listaCarrito = document.getElementById('lista-carrito');
+  const totalCarrito = document.getElementById('total-carrito');
+  const contadorCarrito = document.getElementById('contador-carrito');
+  const carritoDiv = document.getElementById('carrito');
+  const botonVerCarrito = document.getElementById('ver-carrito');
+
+  botonVerCarrito.addEventListener('click', (e) => {
+    e.preventDefault();
+    carritoDiv.classList.toggle('oculto');
+  });
+
+  document.getElementById("ver-carrito").addEventListener("click", function() {
+    window.location.href = "carrito.html";
+  });
+
+  document.querySelectorAll('.agregar-carrito').forEach(boton => {
+    boton.addEventListener('click', () => {
+      const id = boton.getAttribute('data-id');
+      const nombre = boton.getAttribute('data-nombre');
+      const precioTexto = boton.getAttribute('data-precio').replace('$', '').replace(',', '');
+      const precio = parseFloat(precioTexto);
+
+      const productoExistente = carrito.find(item => item.nombre === nombre);
+
+      if (productoExistente) {
+        productoExistente.cantidad++;
+      } else {
+        carrito.push({ id, nombre, precio, cantidad: 1 });
+      }
+
+      guardarCarrito();
+      actualizarCarrito();
+    });
+  });
+
+  function actualizarCarrito() {
+    listaCarrito.innerHTML = '';
+    let total = 0;
+    let totalItems = 0;
+
+    carrito.forEach(producto => {
+      const li = document.createElement('li');
+      li.textContent = `${producto.nombre} x${producto.cantidad} - $${(producto.precio * producto.cantidad).toFixed(2)}`;
+      listaCarrito.appendChild(li);
+
+      total += producto.precio * producto.cantidad;
+      totalItems += producto.cantidad;
+    });
+
+    totalCarrito.textContent = total.toFixed(2);
+    contadorCarrito.textContent = totalItems;
+}
+
+  function guardarCarrito() {
+  localStorage.setItem('carrito', JSON.stringify(carrito));
+}
+
+
+  function vaciarCarrito() {
+    carrito.length = 0;
+    guardarCarrito();
+    actualizarCarrito();
+  }
+
+  function toggleDescripcion(boton) {
+    const descripcionCorta = boton.parentElement.querySelector('.descripcion-corta');
+    const descripcionCompleta = boton.parentElement.querySelector('.descripcion-completa');
+    const estaOculta = descripcionCompleta.classList.contains('oculto');
+
+    if (estaOculta) {
+      descripcionCompleta.classList.remove('oculto');
+      descripcionCorta.classList.add('oculto');
+      boton.textContent = 'Ver menos';
+    } else {
+      descripcionCompleta.classList.add('oculto');
+      descripcionCorta.classList.remove('oculto');
+      boton.textContent = 'Ver más';
+    }
+  }
+
+  actualizarCarrito();
+</script>
+</body>
+</html>
